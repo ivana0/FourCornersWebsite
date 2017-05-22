@@ -16,7 +16,7 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <title>Four Corner Solutions - Design Approach</title>
+    <title>Four Corner Solutions - Contact Us</title>
 
     <style>
         footer {
@@ -71,19 +71,53 @@
                 .navbar-wrapper .navbar {
                     border-radius: 4px;
                 }
-        
         }
-        
 
         .logo {
             float: right;
         }
+        #email{
+            width: 50%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box; /* Make sure that padding and width stays in place */
+            margin-top: 6px; /* Add a top margin */
+            margin-bottom: 16px; /* Bottom margin */
+            resize: vertical;
+        }
+        #fname, select, textarea {
+            width: 50%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
 
+        /* Style the submit button with a specific background color etc */
+        #submitbutton {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+            /* When moving the mouse over the submit button, add a darker green color */
+            #submitbutton :hover {
+                background-color: #45a049;
+            }
+        
     </style>
 </head>
 
 
 <body>
+
     <!--Navigaton Bar-->
     <div class="navbar-wrapper">
         <div class="container">
@@ -97,39 +131,54 @@
                             <li><a href="About_Us.html">About Us</a></li>
                             <li><a href="Our_Client.html">Our Client</a></li>
                             <li><a href="Project_Aims.html"> Project Aims</a></li>
-                            <li class="active"><a href="Design_Approach.html">Design Approach</a></li>
+                            <li><a href="Design_Approach.html">Design Approach</a></li>
                             <li><a href="Our_Solution.html">Our Solution</a></li>
-                            <li><a href="Contact_Us.html">Contact Us</a></li>
+                            <li class="active"><a href="Contact_Us.html">Contact Us</a></li>
 
                         </ul>
                         <div class="logo">
                             <img src="Images/Logo.jpg" width="50" height="50" />
                         </div>
                     </div>
+
                 </div>
             </nav>
         </div>
+
     </div>
     <!--END Navigation Bar-->
-
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
+   <br /> <br /> <br /> <br /><br /><br /> <br /> 
     <!--Content-->
-    <div style="text-align:center" class="container marketing">
-        <div class="jumbotron">
-            <h2><b>DESIGN APPROACH</b></h2>
-            <h3>other heading</h3><br />
-            <img src=".jpg" alt="insert picture?" style="width:auto;height:auto;" /><br /> <br />
-            <p>BLAH BLAH BLAH</p>
-            <p>More blah blah blah</p>
+    <div style="text-align:center;" class="container">
+    <div class="jumbotron">
+            <h2><b>CONTACT US</b></h2>
+            <p style="text-align:center;">Contact us and we'll get back to you as soon as possible.</p>
+            <span class="glyphicon glyphicon-map-marker"></span> UOW, Northfields Ave, Wollongong NSW 2522 <br /><br />
+            <span class="glyphicon glyphicon-phone"></span> (02) 4221 3555 <br /><br />
+            <span class="glyphicon glyphicon-envelope"></span> fourcornersolutionsbusiness@gmail.com
+           <br /><br />
+           
         </div>
+        <h2>Or fill out the form below...</h2>
+        <form action="/submit_page.php">
+            <br />
+            <label for="name">Full Name</label><br />
+            <input type="text" id="fname" name="fullname" placeholder="Your name.." ><br/>
 
-    </div> <!-- /container -->
+           <label for="email">Email</label><br />
+            <input type="email" id="email" name="email" placeholder="Your email..." />
+            <br /><br />
+            
+            <label for="subject">Subject/Message</label><br />  
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+            <br /><br />
+            <input type="submit" id="submitbutton" value="Submit">
+
+        </form>
+    </div>
+    <br /><br /><br /><br /><br />
+        
+
     <!--END Content-->
     <!-- FOOTER -->
     <footer>
