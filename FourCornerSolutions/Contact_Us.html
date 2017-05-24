@@ -29,6 +29,8 @@
             color: black;
             background-color: #777;
         }
+
+       
         /*Navigation bar*/
         .navbar-wrapper {
             position: absolute;
@@ -121,9 +123,14 @@
     <!--Navigaton Bar-->
     <div class="navbar-wrapper">
         <div class="container">
-            <nav class="navbar navbar-inverse navbar-static-top">
+            <nav class="navbar navbar-inverse navbar-fixed-top">
                 <div class="container">
                     <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
                         <a class="navbar-brand" href="Homepage.html">Four Corner Solutions</a>
                     </div>
                     <div id="navbar" class="navbar-collapse collapse">
@@ -150,31 +157,73 @@
    <br /> <br /> <br /> <br /><br /><br /> <br /> 
     <!--Content-->
     <div style="text-align:center;" class="container">
-    <div class="jumbotron">
+        <div class="jumbotron">
             <h2><b>CONTACT US</b></h2>
-            <p style="text-align:center;">Contact us and we'll get back to you as soon as possible.</p>
+            <p style="text-align:center;">Have a problem and need a solution? Or want to give feedback? <br /><br />Contact Four Corner Solutions via the options below, and we'll get back to you as soon as possible.</p>
+            <br />
             <span class="glyphicon glyphicon-map-marker"></span> UOW, Northfields Ave, Wollongong NSW 2522 <br /><br />
             <span class="glyphicon glyphicon-phone"></span> (02) 4221 3555 <br /><br />
             <span class="glyphicon glyphicon-envelope"></span> fourcornersolutionsbusiness@gmail.com
-           <br /><br />
-           
-        </div>
-        <h2>Or fill out the form below...</h2>
-        <form action="/submit_page.php">
+            <br /><br /><br />
+            <p>Or fill out the form below...</p>
             <br />
-            <label for="name">Full Name</label><br />
-            <input type="text" id="fname" name="fullname" placeholder="Your name.." ><br/>
+            <form name="form" action="mailto:fourcornersolutionsbusiness@gmail.com" method="post" enctype="text/plain">
+                <table width="500" height="400">
+                    <tr>
+                         <td valign="top">
+                            <label for="first_name">First Name *</label>
+                        </td>
+                        <td valign="top">
+                            <input type="text" name="first_name" maxlength="60" size="40" placeholder="Enter your first name..." required>
+                        </td>
+                    </tr>
 
-           <label for="email">Email</label><br />
-            <input type="email" id="email" name="email" placeholder="Your email..." />
-            <br /><br />
-            
-            <label for="subject">Subject/Message</label><br />  
-            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-            <br /><br />
-            <input type="submit" id="submitbutton" value="Submit">
+                    <tr>
+                        <td valign="top" ">
+                            <label for="last_name">Last Name *</label>
+                        </td>
+                        <td valign="top">
+                            <input type="text" name="last_name" maxlength="50" size="40" placeholder="Enter your last name..." required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <label for="email">Email Address *</label>
+                        </td>
+                        <td valign="top">
+                            <input type="email" name="email" size="40" maxlength="80" placeholder="Enter your email address..." required>
+                        </td>
 
-        </form>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <label for="phone">Phone Number</label>
+                        </td>
+                        <td valign="top">
+                            <input type="text" name="telephone" maxlength="30" size="40" placeholder="Enter your phone number (optional)" >
+                        </td>
+                    </tr>
+                  
+                    <tr>
+                        <td valign="top">
+                            <label for="comments">Comments *</label>
+                        </td>
+                        <td valign="top">
+                            <textarea name="comments" style="height:200px; width:330px" maxlength="10000" cols="30" rows="8" placeholder="Enter your comment, problem, feedback, etc..." required></textarea>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align:center">
+                            <input type="submit" value="Submit">
+                            <input type="reset" value="Reset" />
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+        
     </div>
     <br /><br /><br /><br /><br />
         
